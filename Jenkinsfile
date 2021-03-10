@@ -1,7 +1,7 @@
 pipeline {
   environment {
     imageName = "mayela/sre-tht"
-    registryCredentialSet = 'docker-hub-mayela'
+    registryCredentialSet = 'docker-hub'
   }
   agent any
   stages {
