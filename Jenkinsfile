@@ -9,7 +9,7 @@ pipeline {
       steps{
         script {
           dir("application"){
-            docker.withRegistry('docker.io', 'docker-hub-mayela') {
+            docker.withRegistry('http://docker.io', 'docker-hub-mayela') {
               def image = docker.build("${imageName}:${BUILD_NUMBER}")
               image.push('latest')
             }
