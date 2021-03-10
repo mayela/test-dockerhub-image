@@ -9,7 +9,7 @@ pipeline {
       steps{
         script {
           dir("application"){
-            def image = docker.build("imageName:${BUILD_NUMBER}")
+            def image = docker.build("${imageName}:${BUILD_NUMBER}")
             image.push('latest')
           }
         }
